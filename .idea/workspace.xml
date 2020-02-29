@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YNVMwTXp2sRbZKsoN4knRC8gRt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="TestNG.FieldAxiomaticsTest">
+    <configuration name="FieldAxiomaticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.FieldAxiomaticsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.FileTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IterationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.IterationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IterationTest.testMultiplicationOfOnes" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.IterationTest" />
+      <option name="METHOD_NAME" value="testMultiplicationOfOnes" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WrongData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.WrongData" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.FieldAxiomaticsTest" />
+        <item itemvalue="TestNG.IterationTest" />
+        <item itemvalue="TestNG.FileTest" />
+        <item itemvalue="TestNG.WrongData" />
+        <item itemvalue="TestNG.IterationTest.testMultiplicationOfOnes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="" />
+      <created>1582782994848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582782994848</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="156" y="128" width="1110" height="540" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1582974720766">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="156" y="128" width="1110" height="540" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/56.28.1310.740@56.28.1310.740" timestamp="1582974720766" />
+    <state x="415" y="202" width="581" height="387" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582786656947">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="415" y="202" width="581" height="387" key="#com.intellij.fileTypes.FileTypeChooser/56.28.1310.740@56.28.1310.740" timestamp="1582786656947" />
+    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1582783611148">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1582783611148" />
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1582986483271">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1582986483271" />
+    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1582986483270">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1582986483270" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1582986483270">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1582986483270" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1582986483271">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1582986483271" />
+    <state width="1264" height="218" key="GridCell.Tab.1.bottom" timestamp="1582978957472">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="218" key="GridCell.Tab.1.bottom/56.28.1310.740@56.28.1310.740" timestamp="1582978957472" />
+    <state width="1264" height="218" key="GridCell.Tab.1.center" timestamp="1582978957472">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="218" key="GridCell.Tab.1.center/56.28.1310.740@56.28.1310.740" timestamp="1582978957472" />
+    <state width="1264" height="218" key="GridCell.Tab.1.left" timestamp="1582978957470">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="218" key="GridCell.Tab.1.left/56.28.1310.740@56.28.1310.740" timestamp="1582978957470" />
+    <state width="1264" height="218" key="GridCell.Tab.1.right" timestamp="1582978957472">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="218" key="GridCell.Tab.1.right/56.28.1310.740@56.28.1310.740" timestamp="1582978957472" />
+    <state x="115" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1582784143536">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="115" y="30" width="1024" height="738" key="SettingsEditor/56.28.1310.740@56.28.1310.740" timestamp="1582784143536" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1582984529763">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1582984529763" />
+    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582973788879">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup/56.28.1310.740@56.28.1310.740" timestamp="1582973788879" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="CalcTest" type="b2602c69:ProjectViewProjectNode" />
+        <item name="CalcTest" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>
