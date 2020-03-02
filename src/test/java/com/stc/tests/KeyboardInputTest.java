@@ -14,10 +14,10 @@ public class KeyboardInputTest {
     List<List<String>> differenceData;
     List<List<String>> divisionData;
     List<List<String>> multiplicationData;
-    double eps;
 
     @BeforeSuite
     public void setUp() {
+        calc=new Calculator();
         sumData=new ArrayList<>();
         differenceData=new ArrayList<>();
         divisionData=new ArrayList<>();
@@ -73,6 +73,10 @@ public class KeyboardInputTest {
                System.err.println("Check input data!");
                ex.printStackTrace();
            }
+           sumData.addAll(tempSum);
+           divisionData.addAll(tempDivision);
+           differenceData.addAll(tempDifference);
+           multiplicationData.addAll(tempMultiplication);
        }
        in.close();
     }
