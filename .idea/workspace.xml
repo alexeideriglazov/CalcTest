@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="" />
+    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/KeyboardInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="alexeideriglzov &lt;alexeideriglazov@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YNVMwTXp2sRbZKsoN4knRC8gRt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,7 +42,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="TestNG.FieldAxiomaticsTest">
+  <component name="RunManager" selected="TestNG.FileTest">
     <configuration name="FieldAxiomaticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
@@ -118,9 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FileTest" />
         <item itemvalue="TestNG.FieldAxiomaticsTest" />
         <item itemvalue="TestNG.IterationTest" />
-        <item itemvalue="TestNG.FileTest" />
         <item itemvalue="TestNG.WrongData" />
         <item itemvalue="TestNG.IterationTest.testMultiplicationOfOnes" />
       </list>
@@ -148,26 +161,30 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="415" y="202" width="581" height="387" key="#com.intellij.fileTypes.FileTypeChooser/56.28.1310.740@56.28.1310.740" timestamp="1582786656947" />
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583155198911">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583155198911" />
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1582783611148">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1582783611148" />
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1582986483271">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583002566283">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1582986483271" />
-    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1582986483270">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583002566283" />
+    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583002566282">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1582986483270" />
-    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1582986483270">
+    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583002566282" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583002566282">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1582986483270" />
-    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1582986483271">
+    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583002566282" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583002566282">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1582986483271" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583002566282" />
     <state width="1264" height="218" key="GridCell.Tab.1.bottom" timestamp="1582978957472">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
@@ -188,14 +205,14 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="115" y="30" width="1024" height="738" key="SettingsEditor/56.28.1310.740@56.28.1310.740" timestamp="1582784143536" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1582984529763">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1583152781678">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1582984529763" />
-    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582973788879">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1583152781678" />
+    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1583155178498">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup/56.28.1310.740@56.28.1310.740" timestamp="1582973788879" />
+    <state x="374" y="89" width="672" height="678" key="search.everywhere.popup/56.28.1310.740@56.28.1310.740" timestamp="1583155178498" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
