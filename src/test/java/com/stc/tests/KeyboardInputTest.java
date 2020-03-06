@@ -6,7 +6,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
 
 public class KeyboardInputTest {
     private Calculator calc;
@@ -22,20 +26,20 @@ public class KeyboardInputTest {
         differenceData=new ArrayList<>();
         divisionData=new ArrayList<>();
         multiplicationData=new ArrayList<>();
-       Scanner in=new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
        System.out.println("Now, we're going to test out calculator");
        System.out.println("Please, input two numbers, name of method and expected result ");
        System.out.println("Calculator can realise next methods: 'sum', 'difference', 'division', 'multiplication'");
        System.out.println("For example: 1.2 -1.1 sum 0.1");
-       System.out.println("To stop reading data and start tests please write 'Lets test'");
+       System.out.println("To stop reading data and start tests please write 'Lets test' or press Enter in empty string");
        while(true)
        {
            List<List<String>> tempSum=new LinkedList<>();
            List<List<String>> tempDifference=new LinkedList<>();
            List<List<String>> tempDivision=new LinkedList<>();
            List<List<String>> tempMultiplication=new LinkedList<>();
-           String temp=in.nextLine();
-           if(temp.equals("Lets test")|| temp.equals("lets test"))
+           String temp = in.nextLine();
+           if(temp.equals("Lets test")|| temp.equals("lets test") || temp.equals(""))
                break;
            String[] str=temp.split("\\s");
            List<String> temporary=new LinkedList<>();
@@ -78,7 +82,7 @@ public class KeyboardInputTest {
            differenceData.addAll(tempDifference);
            multiplicationData.addAll(tempMultiplication);
        }
-       in.close();
+
     }
 
     @DataProvider

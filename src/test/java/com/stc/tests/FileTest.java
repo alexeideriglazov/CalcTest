@@ -1,6 +1,7 @@
 package com.stc.tests;
 
 import calc.Calculator;
+import helpers.file.DataStorage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -14,16 +15,17 @@ public class FileTest {
     public void setUp()
     {
         calc=new Calculator();
-        data=new DataStorage("src/test/java/com/stc/tests/numbers");
+        data=new DataStorage("src/test/java/data/FileData");
     }
 
     @DataProvider
     public Object[][] sumFileData()
     {
-        Object [][] R=new Double [data.numberOfSum()][2];
+        Object [][] R=new Object [data.numberOfSum()][3];
         for(int i =0; i<data.numberOfSum(); i++) {
-            R[i][0]=calc.sum(data.getSum(i).get(0),data.getSum(i).get(1));
-            R[i][1]=Double.parseDouble(data.getSum(i).get(2));
+            R[i][0]=data.getSum(i).left;
+            R[i][1]=data.getSum(i).right;
+            R[i][2]=data.getSum(i).excepted;
         }
         return R;
     }
@@ -31,10 +33,11 @@ public class FileTest {
     @DataProvider
     public Object[][] differenceFileData()
     {
-        Object [][] R=new Double [data.numberOfDifference()][2];
+        Object [][] R=new Object [data.numberOfDifference()][3];
         for(int i =0; i<data.numberOfDifference(); i++) {
-            R[i][0]=calc.difference(data.getDifference(i).get(0),data.getDifference(i).get(1));
-            R[i][1]=Double.parseDouble(data.getDifference(i).get(2));
+            R[i][0]=data.getDifference(i).left;
+            R[i][1]=data.getDifference(i).right;
+            R[i][2]=data.getDifference(i).excepted;
         }
         return R;
     }
@@ -42,10 +45,11 @@ public class FileTest {
     @DataProvider
     public Object[][] divisionFileData()
     {
-        Object [][] R=new Double [data.numberOfDivision()][2];
+        Object [][] R=new Object [data.numberOfDivision()][3];
         for(int i =0; i<data.numberOfDivision(); i++) {
-            R[i][0]=calc.division(data.getDivision(i).get(0),data.getDivision(i).get(1));
-            R[i][1]=Double.parseDouble(data.getDivision(i).get(2));
+            R[i][0]=data.getDivision(i).left;
+            R[i][1]=data.getDivision(i).right;
+            R[i][2]=data.getDivision(i).excepted;
         }
         return R;
     }
@@ -53,32 +57,33 @@ public class FileTest {
     @DataProvider
     public Object[][] multiplicationFileData()
     {
-        Object [][] R=new Double [data.numberOfMultiplication()][2];
+        Object [][] R=new Object [data.numberOfMultiplication()][3];
         for(int i =0; i<data.numberOfMultiplication(); i++) {
-            R[i][0]=calc.multiplication(data.getMultiplication(i).get(0),data.getMultiplication(i).get(1));
-            R[i][1]=Double.parseDouble(data.getMultiplication(i).get(2));
+            R[i][0]=data.getMultiplication(i).left;
+            R[i][1]=data.getMultiplication(i).right;
+            R[i][2]=data.getMultiplication(i).excepted;
         }
         return R;
     }
 
     @Test(dataProvider = "sumFileData")
-    public void sumTest(Double actual, Double expected) {
-        Assert.assertEquals(actual,expected);
+    public void sumTest(String left, String right, Double expected) {
+        Assert.assertEquals(calc.sum(left,right),expected);
     }
 
     @Test(dataProvider = "differenceFileData")
-    public void differenceTest(Double actual, Double expected) {
-        Assert.assertEquals(actual,expected);
+    public void differenceTest(String left, String right, Double expected) {
+        Assert.assertEquals(calc.difference(left,right),expected);
     }
 
     @Test(dataProvider = "divisionFileData")
-    public void divisionTest(Double actual, Double expected) {
-        Assert.assertEquals(actual,expected);
+    public void divisionTest(String left, String right, Double expected) {
+        Assert.assertEquals(calc.division(left,right),expected);
     }
 
     @Test(dataProvider = "multiplicationFileData")
-    public void multiplicationTest(Double actual, Double expected) {
-        Assert.assertEquals(actual,expected);
+    public void multiplicationTest(String left, String right, Double expected) {
+        Assert.assertEquals(calc.multiplication(left,right),expected);
     }
 
     /*
