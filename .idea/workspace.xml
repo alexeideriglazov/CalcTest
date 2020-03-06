@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="Adding KeyboardInputTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data/FileData" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/DataStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/SimpleData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/file/DataStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/file/Operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleTest.java" afterDir="false" />
+    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/random/RandomData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/DataStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/KeyboardInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/KeyboardInputTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/numbers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/DataStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +55,7 @@
       <command value="1 2 sum 1" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.FileTest">
-    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.MatchingTest">
     <configuration name="FieldAxiomaticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
@@ -104,6 +90,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IterationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.IterationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KeyboardInputTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
@@ -121,18 +124,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeyboardInputTest.testInputFromConsoleToContinue_XX1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchingTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="helpers.*" />
+          <option name="PATTERN" value="com.stc.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.stc.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.stc.tests.KeyboardInputTest" />
-      <option name="METHOD_NAME" value="testInputFromConsoleToContinue_XX1" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.MatchingTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -141,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MatchingTest" />
+        <item itemvalue="TestNG.IterationTest" />
+        <item itemvalue="TestNG.FieldAxiomaticsTest" />
         <item itemvalue="TestNG.FileTest" />
         <item itemvalue="TestNG.KeyboardInputTest" />
-        <item itemvalue="Java Scratch.Scratch" />
-        <item itemvalue="TestNG.KeyboardInputTest.testInputFromConsoleToContinue_XX1" />
-        <item itemvalue="TestNG.FieldAxiomaticsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583157843627</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactoring">
+      <created>1583500077495</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583500077495</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -189,7 +198,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding KeyboardInputTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding KeyboardInputTest" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="156" y="128" width="1110" height="540" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1582974720766">
@@ -204,30 +214,30 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="438" y="225" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/56.28.1310.740@56.28.1310.740" timestamp="1583162382552" />
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583500066690">
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583500077092">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583500066690" />
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583500077092" />
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1582783611148">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1582783611148" />
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583500066729">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583510978523">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583500066729" />
-    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583500066728">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583510978523" />
+    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583510978520">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583500066728" />
-    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583500066728">
+    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583510978520" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583510978519">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583500066728" />
-    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583500066729">
+    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583510978519" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583510978521">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583500066729" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583510978521" />
     <state width="1264" height="217" key="GridCell.Tab.1.bottom" timestamp="1583168808013">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
@@ -252,10 +262,14 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1583487098030" />
-    <state x="482" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583168768565">
+    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583500101426">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="482" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583168768565" />
+    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583500101426" />
+    <state x="56" y="28" width="845" height="740" key="find.popup" timestamp="1583504748257">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="56" y="28" width="845" height="740" key="find.popup/56.28.1310.740@56.28.1310.740" timestamp="1583504748257" />
     <state x="481" y="271" width="672" height="677" key="run.anything.popup" timestamp="1583158976779">
       <screen x="56" y="28" width="1310" height="740" />
     </state>

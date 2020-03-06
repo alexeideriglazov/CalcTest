@@ -1,91 +1,63 @@
 package com.stc.tests;
 
 import calc.Calculator;
-import org.testng.Assert;
+import helpers.Constants;
+import helpers.random.RandomData;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import helpers.axiomatics.DataStorage;
 
 public class IterationTest {
     private Calculator calc;
-    public static double EPS=1e-15;
-    private DataStorage data;
+    private RandomData data;
+    private double zero1=0;
+    private double zero2=0;
+    private double one1=1.;
+    private double one2=1.;
 
     @BeforeSuite
-    public void setUp() {
-        calc = new Calculator();
-        data=new DataStorage("/src/test/java/data/AxiomaticsData");
+    public void setUp(){
+        calc=new Calculator();
+        data=new RandomData();
+
     }
 
     @DataProvider
-    public Object[][] threeNumbers()
+    public Object[][] inputData()
     {
-        Object [][] R=new Object [data.number()][3];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-            R[i][1]=data.getElem(i).second;
-            R[i][2]=data.getElem(i).third;
+        Object [][] R=new Object [Constants.NUMBER][2];
+        for(int i =0; i<Constants.NUMBER; i++) {
+            R[i][0]=data.randData.get(i);
+            R[i][1]=data.randData.get(Constants.NUMBER-i-1);
         }
         return R;
     }
 
-    @DataProvider
-    public Object[][] twoNumbers()
-    {
-        Object [][] R=new Object [data.number()][2];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-            R[i][1]=data.getElem(i).second;
-        }
-        return R;
+    @Test(dataProvider = "inputData")
+    public void testMult(String first, String second){
+        one1=calc.multiplication(first,String.valueOf(one1));
+        one2=calc.multiplication(second,String.valueOf(one2));
     }
 
-    @DataProvider
-    public Object[][] oneNumber()
-    {
-        Object [][] R=new Object [data.number()][1];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-        }
-        return R;
+    @Test(dataProvider = "inputData")
+    public void testSum(String first, String second){
+        zero1=calc.sum(first,String.valueOf(zero1));
+        zero2=calc.sum(second,String.valueOf(zero2));
     }
 
-    @Test(dataProvider = "iterationSum")
-    public void testIterationSum(Double first,Double second){
-        assert(Math.abs(first-second)<=eps);
+    @AfterClass
+    public void isCorrect(){
+        if(zero1==zero2)
+            System.out.println("Iteration test for sum is passed");
+        else
+            System.err.println("Iteration test for sum is failed");
+        if(one1==one2)
+            System.out.println("Iteration test for multiplication is passed");
+        else
+            System.err.println("Iteration test for multiplication is failed");
     }
-
-    @Test(dataProvider = "iterationMultiplication")
-    public void testIterationMultiplication(Double first,Double second){
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "multiplicationOfOnes")
-    public void testMultiplicationOfOnes(Double actual, Double expected)
-    {
-        Assert.assertEquals(actual,expected);
-    }
-
-    @Test(dataProvider = "sumOfOnes")
-    public void testSumOfOnes(Double actual, Double expected)
-    {
-        Assert.assertEquals(actual,expected);
-    }
-
-    @Test(dataProvider = "multiplicationOfZeros")
-    public void testMultiplicationOfZeros(Double actual, Double expected)
-    {
-        Assert.assertEquals(actual,expected);
-    }
-
-    @Test(dataProvider = "sumOfZeros")
-    public void testSumOfZeros(Double actual, Double expected)
-    {
-        assert(Math.abs(actual-expected)<=eps);
-    }
-
-     /*
+    /*
     TODO
     @AfterSuite
     public void killAll()

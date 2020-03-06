@@ -1,206 +1,104 @@
 package com.stc.tests;
 
 import calc.Calculator;
+import helpers.axiomatics.DataStorage;
+import helpers.Constants;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Random;
-import java.util.Vector;
-
 public class FieldAxiomaticsTest {
-    private Calculator calc1;
-    private int number;
-    private Vector<Vector<Double>> data;
-    private double eps;
+    private Calculator calc;
+    private DataStorage data;
 
     @BeforeSuite
-    public void setUp()
+    public void setUp() {
+        calc = new Calculator();
+        data=new DataStorage("src/test/java/data/AxiomaticsData");
+    }
+
+    @DataProvider
+    public Object[][] threeNumbers()
     {
-        calc1=new Calculator();
-        number=100;
-        data=new Vector<>();
-        eps=1e-15;
-        Random r1=new Random();
-        for(int i=0; i<number; i++)
-        {
-            Vector<Double> h= new Vector<>();
-            h.add(r1.nextDouble());
-            h.add(r1.nextDouble());
-            h.add(r1.nextDouble());
-            data.add(h);
+        Object [][] R=new Object [data.number()][3];
+        for(int i =0; i<data.number(); i++) {
+            R[i][0]=data.getElem(i).first;
+            R[i][1]=data.getElem(i).second;
+            R[i][2]=data.getElem(i).third;
         }
+        return R;
     }
 
     @DataProvider
-    public Object[][] distributionData()
+    public Object[][] twoNumbers()
     {
-        Object [][] R=new Double [number][2];
-        for(int i =0; i<number; i++) {
-            String a= String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(data.get(i).get(1));
-            String c=String.valueOf(data.get(i).get(1));
-            String aAndC=String.valueOf(calc1.multiplication(a,c));
-            String bAndC=String.valueOf(calc1.multiplication(b,c));
-            String aPlusB=String.valueOf(calc1.sum(a,b));
-            R[i][0]=calc1.multiplication(aPlusB,c);
-            R[i][1]=calc1.sum(aAndC,bAndC);
+        Object [][] R=new Object [data.number()][2];
+        for(int i =0; i<data.number(); i++) {
+            R[i][0]=data.getElem(i).first;
+            R[i][1]=data.getElem(i).second;
         }
         return R;
     }
 
     @DataProvider
-    public Object[][] neutralSum()
+    public Object[][] oneNumber()
     {
-        Object [][] R=new Double [number][2];
-        for(int i =0; i<number; i++) {
-            String a= String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(0.0);
-            R[i][0]=calc1.sum(a,b);
-            R[i][1]=Double.parseDouble(a);
+        Object [][] R=new Object [data.number()][1];
+        for(int i =0; i<data.number(); i++) {
+            R[i][0]=data.getElem(i).first;
         }
         return R;
     }
 
-    @DataProvider
-    public Object[][] neutralMultiplication()
+    @Test(dataProvider = "threeNumbers")
+    public void associativeMultiplicationTest(String first, String second, String third){
+        Assert.assertEquals(calc.multiplication(first,String.valueOf(calc.multiplication(second,third))),
+                calc.multiplication(String.valueOf(calc.multiplication(first,second)),third));
+    }
+
+    @Test(dataProvider = "threeNumbers")
+    public void associativeSumTest(String first, String second, String third){
+        Assert.assertEquals(calc.sum(first,String.valueOf(calc.sum(second,third))),
+                calc.sum(String.valueOf(calc.sum(first,second)),third));
+    }
+
+    @Test(dataProvider = "threeNumbers")
+    public void distributionTest(String first, String second, String third) {
+        Assert.assertEquals(calc.multiplication(first, String.valueOf(calc.sum(second,third))),
+                calc.sum(String.valueOf(calc.multiplication(first,third)),String.valueOf(calc.multiplication(first,second))));
+    }
+
+    @Test(dataProvider = "twoNumbers")
+    public void commutativeSumTest(String first, String second){
+        Assert.assertEquals(calc.sum(first,second),calc.sum(second,first));
+    }
+
+    @Test(dataProvider = "twoNumbers")
+    public void commutativeMultiplicationTest(String first, String second){
+        Assert.assertEquals(calc.multiplication(first,second),calc.multiplication(second,first));
+    }
+
+    @Test(dataProvider = "oneNumber")
+    public void neutralSumTest(String first) {
+        Assert.assertEquals(calc.sum(first,"0"),Double.parseDouble(first));
+    }
+
+    @Test(dataProvider = "oneNumber")
+    public void neutralMultiplicationTest(String first) {
+        Assert.assertEquals(calc.multiplication(first,"1"),Double.parseDouble(first));
+    }
+
+    @Test(dataProvider = "oneNumber")
+    public void inverseMultiplicationTest(String first)
     {
-        Object [][] R=new Double [number][2];
-        for(int i =0; i<number; i++) {
-            String a= String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(1);
-            R[i][0]=calc1.multiplication(a,b);
-            R[i][1]=Double.parseDouble(a);
-        }
-        return R;
+        assert(Math.abs(calc.multiplication(first,String.valueOf(calc.division("1",first)))-1.)<=Constants.EPS);
     }
 
-    @DataProvider
-    public Object[][] commutativeSum()
+    @Test(dataProvider = "oneNumber")
+    public void inverseSumTest(String first)
     {
-        Object [][] R=new Double [number][2];
-        for(int i =0; i<number; i++) {
-            String a= String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(data.get(i).get(1));
-            R[i][0]=calc1.sum(a,b);
-            R[i][1]=calc1.sum(b,a);
-        }
-        return R;
-    }
-
-    @DataProvider
-    public Object[][] commutativeMultiplication() {
-        Object[][] R = new Double[number][2];
-        for (int i = 0; i < number; i++) {
-            String a = String.valueOf(data.get(i).get(0));
-            String b = String.valueOf(data.get(i).get(1));
-            R[i][0] = calc1.multiplication(a, b);
-            R[i][1] = calc1.multiplication(b, a);
-        }
-        return R;
-    }
-
-    @DataProvider
-    public Object[][] inverseSum() {
-        Object[][] R = new Double[number][2];
-        for (int i = 0; i < number; i++) {
-            String a = String.valueOf(data.get(i).get(0));
-            String b = String.valueOf(0.0);
-            String r1=String.valueOf(calc1.difference(b,a));
-            R[i][0] = calc1.sum(a, r1);
-            R[i][1] = 0.0;
-        }
-        return R;
-    }
-
-    @DataProvider
-    public Object[][] inverseMultiplication() {
-        Object[][] R = new Double[number][2];
-        for (int i = 0; i < number; i++) {
-            String a = String.valueOf(data.get(i).get(0));
-            String b = String.valueOf(calc1.division(String.valueOf(1.0),a));
-            R[i][0] = calc1.multiplication(a,b);
-            R[i][1] = 1.0;
-        }
-        return R;
-    }
-
-    @DataProvider
-    public Object[][] associativeSum() {
-        Object[][] R = new Double[number][2];
-        for (int i = 0; i < number; i++){
-            String a=String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(data.get(i).get(1));
-            String c=String.valueOf(data.get(i).get(2));
-            String aPlusB=String.valueOf(calc1.sum(a,b));
-            R[i][0]=calc1.sum(aPlusB,c);
-            String bPlucC=String.valueOf(calc1.sum(b,c));
-            R[i][1]=calc1.sum(a,bPlucC);
-        }
-        return R;
-    }
-
-    @DataProvider
-    public Object[][] associativeMultiplication() {
-        Object[][] R = new Double[number][2];
-        for (int i = 0; i < number; i++){
-            String a=String.valueOf(data.get(i).get(0));
-            String b=String.valueOf(data.get(i).get(1));
-            String c=String.valueOf(data.get(i).get(2));
-            String aMultB=String.valueOf(calc1.multiplication(a,b));
-            R[i][0]=calc1.multiplication(aMultB,c);
-            String bMultC=String.valueOf(calc1.multiplication(b,c));
-            R[i][1]=calc1.multiplication(a,bMultC);
-        }
-        return R;
-    }
-
-    @Test(dataProvider = "associativeMultiplication")
-    public void associativeMultiplicationTest(Double first, Double second){
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "associativeSum")
-    public void associativeSumTest(Double first, Double second){
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "inverseMultiplication")
-    public void inverseMultiplicationTest(Double first, Double second)
-    {
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "inverseSum")
-    public void inverseSumTest(Double first, Double second)
-    {
-        Assert.assertEquals(first,second);
-    }
-
-    @Test(dataProvider = "commutativeSum")
-    public void commutativeSumTest(Double first, Double second){
-        Assert.assertEquals(first,second);
-    }
-
-    @Test(dataProvider = "commutativeMultiplication")
-    public void commutativeMultiplicationTest(Double first, Double second){
-        Assert.assertEquals(first,second);
-    }
-
-
-    @Test(dataProvider = "distributionData")
-    public void distributionTest(Double first, Double second) {
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "neutralSum")
-    public void neutralSumTest(Double first, Double second) {
-        assert(Math.abs(first-second)<=eps);
-    }
-
-    @Test(dataProvider = "neutralMultiplication")
-    public void neutralMultiplicationTest(Double first, Double second) { Assert.assertEquals(first,second);
+        Assert.assertEquals(calc.sum(first,String.valueOf(calc.difference("0",first))),0.);
     }
 
      /*
@@ -208,7 +106,8 @@ public class FieldAxiomaticsTest {
     @AfterSuite
     public void killAll()
     {
-        calc1=null;
+        calc=null;
+        data=null;
     }
     */
 }
