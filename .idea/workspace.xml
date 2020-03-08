@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/operands/OperandsStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/operands/SimpleData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/FileData" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/IterationData" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/MatchingData" afterDir="false" />
+    <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/KeyboardInputTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/WrongData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/WrongData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/AxiomaticsData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/FileData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/DataStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/SimpleData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/FileStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/random/RandomData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/MatchingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/MatchingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/WrongData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/WrongData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583511016902</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactoring">
+      <created>1583693976037</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583693976037</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactoring">
+      <created>1583694011644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583694011644</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -254,30 +242,34 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="468" y="28" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/56.28.1310.740@56.28.1310.740" timestamp="1583679701397" />
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583693975190">
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583694075834">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583693975190" />
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583694075834" />
+    <state x="177" y="86" width="1048" height="620" key="DiffContextDialog" timestamp="1583694071470">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state x="177" y="86" width="1048" height="620" key="DiffContextDialog/56.28.1310.740@56.28.1310.740" timestamp="1583694071470" />
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1583576511706">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1583576511706" />
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583693150824">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583694087359">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583693150824" />
-    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583693150823">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583694087359" />
+    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583694087357">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583693150823" />
-    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583693150821">
+    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583694087357" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583694087357">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583693150821" />
-    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583693150824">
+    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583694087357" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583694087358">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583693150824" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583694087358" />
     <state width="1264" height="217" key="GridCell.Tab.1.bottom" timestamp="1583168808013">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
@@ -302,10 +294,10 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="372" y="225" width="676" height="345" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1583674917116" />
-    <state x="482" y="318" width="458" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583693979671">
+    <state x="482" y="318" width="458" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583694099675">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="482" y="318" width="458" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583693979671" />
+    <state x="482" y="318" width="458" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583694099675" />
     <state x="56" y="28" width="845" height="740" key="find.popup" timestamp="1583504748257">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
