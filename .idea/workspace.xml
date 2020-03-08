@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c4a68ec-13df-43d8-9ddf-2e9271962635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/random/RandomData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/operands/OperandsStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/operands/SimpleData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/FileData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/IterationData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/MatchingData" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FieldAxiomaticsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/FileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/IterationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/KeyboardInputTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/MatchingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stc/tests/WrongData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stc/tests/WrongData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/AxiomaticsData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/AxiomaticsData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/FileData" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/DataStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/axiomatics/SimpleData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/FileStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/file/SimpleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/random/RandomData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FieldAxiomaticsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/FileTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/IterationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/MatchingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/MatchingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stc/tests/WrongData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stc/tests/WrongData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,27 +54,36 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YNVMwTXp2sRbZKsoN4knRC8gRt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Задание 2/RestDemo" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="1 2 sum 1" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.MatchingTest">
+  <component name="RunManager" selected="TestNG.IterationTest">
     <configuration name="FieldAxiomaticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
@@ -107,23 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeyboardInputTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="CalcTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="helpers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.stc.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.stc.tests.KeyboardInputTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MatchingTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CalcTest" />
       <extension name="coverage">
@@ -141,13 +152,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WrongData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CalcTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stc.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stc.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.stc.tests.WrongData" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MatchingTest" />
         <item itemvalue="TestNG.IterationTest" />
+        <item itemvalue="TestNG.MatchingTest" />
         <item itemvalue="TestNG.FieldAxiomaticsTest" />
         <item itemvalue="TestNG.FileTest" />
-        <item itemvalue="TestNG.KeyboardInputTest" />
+        <item itemvalue="TestNG.WrongData" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583500077495</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring">
+      <created>1583511016902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583511016902</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -197,6 +232,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adding KeyboardInputTest" />
     <MESSAGE value="refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
@@ -206,38 +242,42 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="156" y="128" width="1110" height="540" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/56.28.1310.740@56.28.1310.740" timestamp="1582974720766" />
-    <state x="415" y="202" width="626" height="387" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583498863060">
+    <state x="415" y="202" width="617" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583692901008">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="415" y="202" width="626" height="387" key="#com.intellij.fileTypes.FileTypeChooser/56.28.1310.740@56.28.1310.740" timestamp="1583498863060" />
+    <state x="415" y="202" width="617" height="385" key="#com.intellij.fileTypes.FileTypeChooser/56.28.1310.740@56.28.1310.740" timestamp="1583692901008" />
     <state x="438" y="225" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1583162382552">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="438" y="225" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/56.28.1310.740@56.28.1310.740" timestamp="1583162382552" />
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583500077092">
+    <state x="468" y="28" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583679701397">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583500077092" />
-    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1582783611148">
+    <state x="468" y="28" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/56.28.1310.740@56.28.1310.740" timestamp="1583679701397" />
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2" timestamp="1583511016495">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1582783611148" />
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583510978523">
+    <state x="319" y="28" width="773" height="738" key="CommitChangelistDialog2/56.28.1310.740@56.28.1310.740" timestamp="1583511016495" />
+    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl" timestamp="1583576511706">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583510978523" />
-    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583510978520">
+    <state x="494" y="141" width="424" height="512" key="FileChooserDialogImpl/56.28.1310.740@56.28.1310.740" timestamp="1583576511706" />
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom" timestamp="1583693150824">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583510978520" />
-    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583510978519">
+    <state width="1264" height="175" key="GridCell.Tab.0.bottom/56.28.1310.740@56.28.1310.740" timestamp="1583693150824" />
+    <state width="1264" height="175" key="GridCell.Tab.0.center" timestamp="1583693150823">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583510978519" />
-    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583510978521">
+    <state width="1264" height="175" key="GridCell.Tab.0.center/56.28.1310.740@56.28.1310.740" timestamp="1583693150823" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left" timestamp="1583693150821">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583510978521" />
+    <state width="1264" height="175" key="GridCell.Tab.0.left/56.28.1310.740@56.28.1310.740" timestamp="1583693150821" />
+    <state width="1264" height="175" key="GridCell.Tab.0.right" timestamp="1583693150824">
+      <screen x="56" y="28" width="1310" height="740" />
+    </state>
+    <state width="1264" height="175" key="GridCell.Tab.0.right/56.28.1310.740@56.28.1310.740" timestamp="1583693150824" />
     <state width="1264" height="217" key="GridCell.Tab.1.bottom" timestamp="1583168808013">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
@@ -258,14 +298,14 @@
       <screen x="56" y="28" width="1310" height="740" />
     </state>
     <state x="84" y="30" width="1024" height="738" key="SettingsEditor/56.28.1310.740@56.28.1310.740" timestamp="1583341577127" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1583487098030">
+    <state x="372" y="225" width="676" height="345" key="com.intellij.ide.util.TipDialog" timestamp="1583674917116">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1583487098030" />
-    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583500101426">
+    <state x="372" y="225" width="676" height="345" key="com.intellij.ide.util.TipDialog/56.28.1310.740@56.28.1310.740" timestamp="1583674917116" />
+    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583511022952">
       <screen x="56" y="28" width="1310" height="740" />
     </state>
-    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583500101426" />
+    <state x="482" y="318" width="448" height="158" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/56.28.1310.740@56.28.1310.740" timestamp="1583511022952" />
     <state x="56" y="28" width="845" height="740" key="find.popup" timestamp="1583504748257">
       <screen x="56" y="28" width="1310" height="740" />
     </state>

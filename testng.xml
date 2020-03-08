@@ -3,7 +3,7 @@
 
     <test name="Sum">
         <classes>
-            <class name="com.stc.tests.FileTest" />
+            <class name="com.stc.tests.FileTest"/>
         </classes>
     </test>
 

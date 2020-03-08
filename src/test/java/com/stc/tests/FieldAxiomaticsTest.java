@@ -1,8 +1,9 @@
 package com.stc.tests;
 
 import calc.Calculator;
-import helpers.axiomatics.DataStorage;
+import helpers.operands.SimpleData;
 import helpers.Constants;
+import helpers.operands.OperandsStorage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -10,95 +11,99 @@ import org.testng.annotations.Test;
 
 public class FieldAxiomaticsTest {
     private Calculator calc;
-    private DataStorage data;
+    private OperandsStorage data;
 
     @BeforeSuite
     public void setUp() {
         calc = new Calculator();
-        data=new DataStorage("src/test/java/data/AxiomaticsData");
+        data = new OperandsStorage("src/test/resources/AxiomaticsData");
     }
 
     @DataProvider
-    public Object[][] threeNumbers()
-    {
-        Object [][] R=new Object [data.number()][3];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-            R[i][1]=data.getElem(i).second;
-            R[i][2]=data.getElem(i).third;
+    public Object[][] numbers() {
+        Object[][] providerData = new Object[data.number()][1];
+        for (int i = 0; i < data.number(); i++) {
+            providerData[i][0] = data.getElem(i);
         }
-        return R;
+        return providerData;
     }
 
-    @DataProvider
-    public Object[][] twoNumbers()
-    {
-        Object [][] R=new Object [data.number()][2];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-            R[i][1]=data.getElem(i).second;
-        }
-        return R;
+    @Test(dataProvider = "numbers")
+    public void associativeMultiplicationTest(SimpleData input) {
+        System.out.println("associativeMultiplicationTest is starting with input data: " + input.operands.get(0) + " , " + input.operands.get(1) + " , " + input.operands.get(2));
+        double value1 = calc.multiplication(input.operands.get(0), String.valueOf(calc.multiplication(input.operands.get(1), input.operands.get(2))));
+        double value2 = calc.multiplication(String.valueOf(calc.multiplication(input.operands.get(0), input.operands.get(1))), input.operands.get(2));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @DataProvider
-    public Object[][] oneNumber()
-    {
-        Object [][] R=new Object [data.number()][1];
-        for(int i =0; i<data.number(); i++) {
-            R[i][0]=data.getElem(i).first;
-        }
-        return R;
+    @Test(dataProvider = "numbers")
+    public void associativeSumTest(SimpleData input) {
+        System.out.println("associativeSumTest is starting with input data: " + input.operands.get(0) + " , " + input.operands.get(1) + " , " + input.operands.get(2));
+        double value1 = calc.sum(input.operands.get(0), String.valueOf(calc.sum(input.operands.get(1), input.operands.get(2))));
+        double value2 = calc.sum(String.valueOf(calc.sum(input.operands.get(0), input.operands.get(1))), input.operands.get(2));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "threeNumbers")
-    public void associativeMultiplicationTest(String first, String second, String third){
-        Assert.assertEquals(calc.multiplication(first,String.valueOf(calc.multiplication(second,third))),
-                calc.multiplication(String.valueOf(calc.multiplication(first,second)),third));
+    @Test(dataProvider = "numbers")
+    public void distributionTest(SimpleData input) {
+        System.out.println("distributionTest is starting with input data: " + input.operands.get(0) + " , " + input.operands.get(1) + " , " + input.operands.get(2));
+        double value1 = calc.multiplication(input.operands.get(0), String.valueOf(calc.sum(input.operands.get(1), input.operands.get(2))));
+        double value2 = calc.sum(String.valueOf(calc.multiplication(input.operands.get(0), input.operands.get(2))), String.valueOf(calc.multiplication(input.operands.get(0), input.operands.get(1))));
+        double difference = calc.multiplication(input.operands.get(0), String.valueOf(calc.sum(input.operands.get(1), input.operands.get(2)))) - calc.sum(String.valueOf(calc.multiplication(input.operands.get(0), input.operands.get(2))), String.valueOf(calc.multiplication(input.operands.get(0), input.operands.get(1))));
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "threeNumbers")
-    public void associativeSumTest(String first, String second, String third){
-        Assert.assertEquals(calc.sum(first,String.valueOf(calc.sum(second,third))),
-                calc.sum(String.valueOf(calc.sum(first,second)),third));
+    @Test(dataProvider = "numbers")
+    public void commutativeSumTest(SimpleData input) {
+        System.out.println("commutativeSumTest is starting with input data: " + input.operands.get(0) + " , " + input.operands.get(1));
+        double value1 = calc.sum(input.operands.get(0), input.operands.get(1));
+        double value2 = calc.sum(input.operands.get(1), input.operands.get(0));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "threeNumbers")
-    public void distributionTest(String first, String second, String third) {
-        Assert.assertEquals(calc.multiplication(first, String.valueOf(calc.sum(second,third))),
-                calc.sum(String.valueOf(calc.multiplication(first,third)),String.valueOf(calc.multiplication(first,second))));
+    @Test(dataProvider = "numbers")
+    public void commutativeMultiplicationTest(SimpleData input) {
+        System.out.println("commutativeMultiplicationTest is starting with input data: " + input.operands.get(0) + " , " + input.operands.get(1));
+        double value1 = calc.multiplication(input.operands.get(0), input.operands.get(1));
+        double value2 = calc.multiplication(input.operands.get(1), input.operands.get(0));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "twoNumbers")
-    public void commutativeSumTest(String first, String second){
-        Assert.assertEquals(calc.sum(first,second),calc.sum(second,first));
+    @Test(dataProvider = "numbers")
+    public void neutralSumTest(SimpleData input) {
+        System.out.println("neutralSumTestTest is starting with input data: " + input.operands.get(0));
+        double value1 = calc.sum(input.operands.get(0), "0");
+        double value2 = Double.parseDouble(input.operands.get(0));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "twoNumbers")
-    public void commutativeMultiplicationTest(String first, String second){
-        Assert.assertEquals(calc.multiplication(first,second),calc.multiplication(second,first));
+    @Test(dataProvider = "numbers")
+    public void neutralMultiplicationTest(SimpleData input) {
+        System.out.println("neutralMultiplicationTestTest is starting with input data: " + input.operands.get(0));
+        double value1 = calc.multiplication(input.operands.get(0), "1");
+        double value2 = Double.parseDouble(input.operands.get(0));
+        double difference = Math.abs(value1 - value2);
+        Assert.assertEquals(value1, value2, "Difference is: " + difference);
     }
 
-    @Test(dataProvider = "oneNumber")
-    public void neutralSumTest(String first) {
-        Assert.assertEquals(calc.sum(first,"0"),Double.parseDouble(first));
+    @Test(dataProvider = "numbers")
+    public void inverseMultiplicationTest(SimpleData input) {
+        System.out.println("inverseMultiplicationTestTest is starting with input data: " + input.operands.get(0));
+        assert (Math.abs(calc.multiplication(input.operands.get(0), String.valueOf(calc.division("1", input.operands.get(0)))) - 1.) <= Constants.EPS)
+                : "Difference is more than: " + Constants.EPS;
+
     }
 
-    @Test(dataProvider = "oneNumber")
-    public void neutralMultiplicationTest(String first) {
-        Assert.assertEquals(calc.multiplication(first,"1"),Double.parseDouble(first));
-    }
-
-    @Test(dataProvider = "oneNumber")
-    public void inverseMultiplicationTest(String first)
-    {
-        assert(Math.abs(calc.multiplication(first,String.valueOf(calc.division("1",first)))-1.)<=Constants.EPS);
-    }
-
-    @Test(dataProvider = "oneNumber")
-    public void inverseSumTest(String first)
-    {
-        Assert.assertEquals(calc.sum(first,String.valueOf(calc.difference("0",first))),0.);
+    @Test(dataProvider = "numbers")
+    public void inverseSumTest(SimpleData input) {
+        System.out.println("inverseMultiplicationTestTest is starting with input data: " + input.operands.get(0));
+        double difference = Math.abs(calc.sum(input.operands.get(0), String.valueOf(calc.difference("0", input.operands.get(0)))));
+        Assert.assertEquals(difference, 0., "Difference is: " + difference);
     }
 
      /*
